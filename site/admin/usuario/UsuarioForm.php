@@ -11,12 +11,12 @@ $data = new stdClass();
 $editando = false;
 
 if (!empty($_GET['id'])) {
-    $data     = $db->find((int) $_GET['id']);
+    $data = $db->find((int) $_GET['id']);
     $editando = true;
 }
 
 if (!empty($_POST)) {
-    $data     = (object) $_POST;
+    $data = (object) $_POST;
     $editando = !empty($_POST['id']);
 
     if (empty($_POST['nome']))

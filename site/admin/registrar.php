@@ -4,8 +4,8 @@ include 'header.php';
 include_once 'database/db.class.php';
 
 $success = '';
-$errors  = [];
-$data    = new stdClass();
+$errors = [];
+$data = new stdClass();
 
 if (!empty($_POST)) {
     $data = (object) $_POST;

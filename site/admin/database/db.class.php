@@ -2,11 +2,11 @@
 
 class db
 {
-    private $host     = 'localhost';
-    private $user     = 'root';
+    private $host = 'localhost';
+    private $user = 'root';
     private $password = '';
-    private $port     = '3306';
-    private $dbname   = 'db_pweb1_cinema';
+    private $port = '3306';
+    private $dbname = 'db_pweb1_cinema';
 
     private $table_name;
     private $conn;
