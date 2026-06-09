@@ -3,11 +3,11 @@ include '../header.php';
 include '../autenticacao.php';
 include_once '../database/db.class.php';
 
-$db      = new db('sessoes');
+$db = new db('sessoes');
 $success = '';
-$error   = '';
-$errors  = [];
-$data    = new stdClass();
+$error = '';
+$errors = [];
+$data = new stdClass();
 
 if (!empty($_GET['id'])) {
     $data = $db->find((int) $_GET['id']);
