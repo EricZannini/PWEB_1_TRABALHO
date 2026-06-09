@@ -76,25 +76,28 @@ if (!empty($_POST)) {
         <div class="mb-3">
             <label class="form-label">Nome completo <span class="text-danger">*</span></label>
             <input type="text" name="nome" class="form-control"
+                   placeholder="Nome completo"
                    value="<?= getFormValue($data, 'nome') ?>">
         </div>
 
         <div class="mb-3">
             <label class="form-label">Telefone</label>
             <input type="text" name="telefone" class="form-control"
-                   value="<?= getFormValue($data, 'telefone') ?>"
-                   placeholder="Telefone de contato">
+                   placeholder="Telefone de contato"
+                   value="<?= getFormValue($data, 'telefone') ?>">
         </div>
 
         <div class="mb-3">
             <label class="form-label">E-mail <span class="text-danger">*</span></label>
             <input type="email" name="email" class="form-control"
+                   placeholder="Endereço de e-mail"
                    value="<?= getFormValue($data, 'email') ?>">
         </div>
 
         <div class="mb-3">
             <label class="form-label">Login <span class="text-danger">*</span></label>
             <input type="text" name="login" class="form-control"
+                   placeholder="Login de acesso"
                    value="<?= getFormValue($data, 'login') ?>">
         </div>
 
@@ -102,7 +105,8 @@ if (!empty($_POST)) {
             <label class="form-label">
                 Senha <?= $editando ? '<span class="text-muted small">(deixe em branco para não alterar)</span>' : '<span class="text-danger">*</span>' ?>
             </label>
-            <input type="password" name="senha" class="form-control">
+            <input type="password" name="senha" class="form-control"
+                   placeholder="<?= $editando ? 'Deixe em branco para manter' : 'Escolha uma senha' ?>">
         </div>
 
         <div class="d-flex gap-2">

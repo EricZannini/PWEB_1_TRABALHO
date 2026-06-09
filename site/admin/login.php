@@ -52,7 +52,7 @@ if (!empty($_POST)) {
                     </span>
                     <input type="text" name="login" class="form-control"
                            value="<?= htmlspecialchars($_POST['login'] ?? '') ?>"
-                           placeholder="seu login" autofocus>
+                           placeholder="Digite seu login" autofocus>
                 </div>
             </div>
             <div class="mb-4">

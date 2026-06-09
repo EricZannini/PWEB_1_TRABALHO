@@ -54,26 +54,31 @@ if (!empty($_POST)) {
             <div class="mb-3">
                 <label class="form-label">Nome completo</label>
                 <input type="text" name="nome" class="form-control"
+                       placeholder="Nome completo"
                        value="<?= getFormValue($data, 'nome') ?>">
             </div>
             <div class="mb-3">
                 <label class="form-label">Telefone</label>
                 <input type="text" name="telefone" class="form-control"
+                       placeholder="Telefone de contato"
                        value="<?= getFormValue($data, 'telefone') ?>">
             </div>
             <div class="mb-3">
                 <label class="form-label">E-mail</label>
                 <input type="email" name="email" class="form-control"
+                       placeholder="Endereço de e-mail"
                        value="<?= getFormValue($data, 'email') ?>">
             </div>
             <div class="mb-3">
                 <label class="form-label">Login</label>
                 <input type="text" name="login" class="form-control"
+                       placeholder="Escolha um login"
                        value="<?= getFormValue($data, 'login') ?>">
             </div>
             <div class="mb-4">
                 <label class="form-label">Senha</label>
-                <input type="password" name="senha" class="form-control">
+                <input type="password" name="senha" class="form-control"
+                       placeholder="Escolha uma senha">
             </div>
             <button type="submit" class="btn btn-danger w-100">Cadastrar</button>
             <a href="login.php" class="btn btn-outline-secondary w-100 mt-2">Voltar ao login</a>
