@@ -63,14 +63,14 @@ if (!empty($_POST)) {
             <label class="form-label">Título <span class="text-danger">*</span></label>
             <input type="text" name="titulo" class="form-control"
                    value="<?= getFormValue($data, 'titulo') ?>"
-                   placeholder="Ex: Super Mario Galaxy O Filme">
+                   placeholder="Título do filme">
         </div>
 
         <div class="mb-3">
             <label class="form-label">Gênero <span class="text-danger">*</span></label>
             <input type="text" name="genero" class="form-control"
                    value="<?= getFormValue($data, 'genero') ?>"
-                   placeholder="Ex: Ação e Aventura">
+                   placeholder="Gênero do filme">
         </div>
 
         <div class="row">
@@ -78,7 +78,7 @@ if (!empty($_POST)) {
                 <label class="form-label">Duração <span class="text-danger">*</span></label>
                 <input type="text" name="duracao" class="form-control"
                        value="<?= getFormValue($data, 'duracao') ?>"
-                       placeholder="Ex: 1h39">
+                       placeholder="Duração">
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Classificação <span class="text-danger">*</span></label>

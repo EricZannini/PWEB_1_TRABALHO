@@ -63,7 +63,7 @@ if (!empty($_POST)) {
             <label class="form-label">Sala <span class="text-danger">*</span></label>
             <input type="text" name="sala" class="form-control"
                    value="<?= getFormValue($data, 'sala') ?>"
-                   placeholder="Ex: Sala 1, Sala VIP">
+                   placeholder="Nome da sala">
         </div>
 
         <div class="row">
@@ -83,7 +83,7 @@ if (!empty($_POST)) {
             <label class="form-label">Preço (R$) <span class="text-danger">*</span></label>
             <input type="number" name="preco" step="0.01" min="0" class="form-control"
                    value="<?= getFormValue($data, 'preco') ?>"
-                   placeholder="0.00">
+                   placeholder="Preço do ingresso">
         </div>
 
         <div class="d-flex gap-2 mt-2">

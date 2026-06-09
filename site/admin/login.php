@@ -1,4 +1,5 @@
 <?php
+$paginaAuth = true;
 include 'header.php';
 include_once 'database/db.class.php';
 

@@ -61,7 +61,7 @@ if (!empty($_POST)) {
             <label class="form-label">Nome do Cliente <span class="text-danger">*</span></label>
             <input type="text" name="cliente_nome" class="form-control"
                    value="<?= getFormValue($data, 'cliente_nome') ?>"
-                   placeholder="Nome completo">
+                   placeholder="Nome do cliente">
         </div>
 
         <div class="row">
@@ -69,7 +69,7 @@ if (!empty($_POST)) {
                 <label class="form-label">Assento <span class="text-danger">*</span></label>
                 <input type="text" name="assento" class="form-control"
                        value="<?= getFormValue($data, 'assento') ?>"
-                       placeholder="Ex: A1, B5, C12">
+                       placeholder="Número do assento">
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Tipo de Ingresso <span class="text-danger">*</span></label>

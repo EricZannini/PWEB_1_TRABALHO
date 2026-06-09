@@ -106,6 +106,7 @@ function getFormValue($data, $field)
 
 <div class="container">
 
+    <?php if (empty($paginaAuth)): ?>
     <header class="blog-header glass-effect">
         <div class="row d-flex justify-content align-items-center">
 
@@ -135,6 +136,7 @@ function getFormValue($data, $field)
 
         </div>
     </header>
+    <?php endif; ?>
 
     <?php if (isset($_SESSION['usuario_id'])): ?>
     <div class="nav-scroller py-1 mb-2">

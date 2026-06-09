@@ -83,7 +83,7 @@ if (!empty($_POST)) {
             <label class="form-label">Telefone</label>
             <input type="text" name="telefone" class="form-control"
                    value="<?= getFormValue($data, 'telefone') ?>"
-                   placeholder="(49) 99999-0000">
+                   placeholder="Telefone de contato">
         </div>
 
         <div class="mb-3">
