@@ -57,6 +57,8 @@ function getFormValue($data, $field)
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        /* inspiração para o CSS: https://pin.it/6VtQZIxjq */
+        /* desenvolvedor: @lucaslab.dev */
         body {
             background-image: url('/PWEB_1_TRABALHO/site/admin/img/background_cinema_blur.png');
             background-size: cover;
