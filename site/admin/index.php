@@ -18,6 +18,7 @@ $totalUsuarios = count($dbUsuario->all());
 <p class="text-muted mb-4">Bem-vindo ao painel TapCine,
     <strong><?= htmlspecialchars($_SESSION['usuario_nome']) ?></strong></p>
 
+
 <div class="row g-4 mb-5">
 
     <div class="col-sm-6 col-xl-3">
