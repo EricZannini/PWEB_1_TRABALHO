@@ -74,7 +74,8 @@ if (!empty($_POST)) {
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Hora de Início <span class="text-danger">*</span></label>
-                <input type="time" name="hora_inicio" class="form-control"
+                <input type="text" name="hora_inicio" class="form-control"
+                       placeholder="Hora de início"
                        value="<?= getFormValue($data, 'hora_inicio') ?>">
             </div>
         </div>
