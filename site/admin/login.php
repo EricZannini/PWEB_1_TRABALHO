@@ -16,8 +16,8 @@ if (!empty($_POST)) {
         $usuario = $db->findBy('login', $login);
 
         if ($usuario && password_verify($senha, $usuario->senha)) {
-            $_SESSION['usuario_id']    = $usuario->id;
-            $_SESSION['usuario_nome']  = $usuario->nome;
+            $_SESSION['usuario_id'] = $usuario->id;
+            $_SESSION['usuario_nome'] = $usuario->nome;
             $_SESSION['usuario_email'] = $usuario->email;
             header('Location: /PWEB_1_TRABALHO/site/admin/index.php');
             exit;
