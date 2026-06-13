@@ -67,6 +67,29 @@ $totalUsuarios = count($dbUsuario->all());
 
 </div>
 
+<div id="carouselExampleAutoplaying" class="carousel slide mb-4 arredondado" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/PWEB_1_TRABALHO/site/admin/img/mario.jpg" class="arredondado w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/PWEB_1_TRABALHO/site/admin/img/crepusculo.jpg" class="arredondado d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/PWEB_1_TRABALHO/site/admin/img/focinho.jpg" class="arredondado w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/PWEB_1_TRABALHO/site/admin/img/panico.jpg" class="arredondado w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/PWEB_1_TRABALHO/site/admin/img/devoradores.jpg" class="arredondado w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/PWEB_1_TRABALHO/site/admin/img/velhosb.jpg" class="arredondado w-100" alt="...">
+        </div>
+    </div>
+</div>
+
 <h5 class="fw-semibold mb-3">Filmes em Cartaz</h5>
 <div class="glass-effect p-0 overflow-hidden">
     <table class="table table-hover mb-0">
