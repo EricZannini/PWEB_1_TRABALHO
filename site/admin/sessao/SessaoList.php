@@ -5,13 +5,16 @@ include_once '../database/db.class.php';
 
 $db = new db('sessoes');
 
+// deleta
 if (!empty($_GET['delete'])) {
     $db->destroy((int) $_GET['delete']);
     $msgDelete = 'Sessão excluída com sucesso!';
 }
 
+// pega tudo
 $sessoes = $db->all();
 
+// pesquisa
 if (!empty($_POST['buscar'])) {
     $sessoes = $db->search(['tipo' => $_POST['tipo'], 'valor' => $_POST['valor']]);
 }

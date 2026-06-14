@@ -17,6 +17,7 @@ class db
         $this->conn = $this->connect();
     }
 
+    // conecta no banco
     private function connect()
     {
         try {
@@ -32,6 +33,7 @@ class db
         }
     }
 
+    // pega tudo
     public function all()
     {
         $sql = "SELECT * FROM $this->table_name";
@@ -40,6 +42,7 @@ class db
         return $st->fetchAll(PDO::FETCH_OBJ);
     }
 
+    // busca pelo id
     public function find($id)
     {
         $sql = "SELECT * FROM $this->table_name WHERE id = ?";
@@ -48,6 +51,7 @@ class db
         return $st->fetchObject();
     }
 
+    // busca por campo
     public function findBy($campo, $valor)
     {
         $sql = "SELECT * FROM $this->table_name WHERE $campo = ?";
@@ -56,6 +60,7 @@ class db
         return $st->fetchObject();
     }
 
+    // salva
     public function store($dados)
     {
         $campos = '';
@@ -75,6 +80,7 @@ class db
         $st->execute($vetorData);
     }
 
+    // atualiza
     public function update($dados)
     {
         $campos = '';
@@ -96,6 +102,7 @@ class db
         $st->execute($vetorData);
     }
 
+    // deleta
     public function destroy($id)
     {
         $sql = "DELETE FROM $this->table_name WHERE id = ?";
@@ -103,6 +110,7 @@ class db
         $st->execute([$id]);
     }
 
+    // pesquisa
     public function search($dados)
     {
         $campo = $dados['tipo'];

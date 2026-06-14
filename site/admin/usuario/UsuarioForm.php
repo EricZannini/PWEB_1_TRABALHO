@@ -10,6 +10,7 @@ $errors = [];
 $data = new stdClass();
 $editando = false;
 
+// novo ou edição
 if (!empty($_GET['id'])) {
     $data = $db->find((int) $_GET['id']);
     $editando = true;
@@ -19,6 +20,7 @@ if (!empty($_POST)) {
     $data = (object) $_POST;
     $editando = !empty($_POST['id']);
 
+    // valida
     if (empty($_POST['nome']))
         $errors[] = '<li>Nome é obrigatório.</li>';
     if (empty($_POST['email']))
@@ -28,6 +30,7 @@ if (!empty($_POST)) {
     if (!$editando && empty($_POST['senha']))
         $errors[] = '<li>Senha é obrigatória.</li>';
 
+    // salva com senha criptografada
     if (empty($errors)) {
         try {
             if (!$editando) {
@@ -43,6 +46,7 @@ if (!empty($_POST)) {
                     'email'    => $_POST['email'],
                     'login'    => $_POST['login'],
                 ];
+                // edição: só atualiza senha se preenchida
                 if (!empty($_POST['senha'])) {
                     $dados['senha'] = password_hash($_POST['senha'], PASSWORD_DEFAULT);
                 }

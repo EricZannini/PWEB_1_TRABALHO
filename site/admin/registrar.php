@@ -22,10 +22,12 @@ if (!empty($_POST)) {
     if (empty($errors)) {
         $db = new db('usuarios');
 
+        // verifica se o login já existe
         $existe = $db->findBy('login', $_POST['login']);
         if ($existe) {
             $errors[] = '<li>Este login já está em uso.</li>';
         } else {
+            // criptografa e salva
             $db->store([
                 'nome'     => $_POST['nome'],
                 'telefone' => $_POST['telefone'] ?? '',

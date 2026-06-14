@@ -5,13 +5,16 @@ include_once '../database/db.class.php';
 
 $db = new db('usuarios');
 
+// deleta
 if (!empty($_GET['delete'])) {
     $db->destroy((int) $_GET['delete']);
     $msgDelete = 'Usuário excluído com sucesso!';
 }
 
+// pega tudo
 $usuarios = $db->all();
 
+// pesquisa
 if (!empty($_POST['buscar'])) {
     $usuarios = $db->search(['tipo' => $_POST['tipo'], 'valor' => $_POST['valor']]);
 }

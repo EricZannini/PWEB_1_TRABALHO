@@ -5,13 +5,16 @@ include_once '../database/db.class.php';
 
 $db = new db('filmes');
 
+// deleta
 if (!empty($_GET['delete'])) {
     $db->destroy((int) $_GET['delete']);
     $msgDelete = 'Filme excluído com sucesso!';
 }
 
+// pega tudo
 $filmes = $db->all();
 
+// pesquisa
 if (!empty($_POST['buscar'])) {
     $filmes = $db->search(['tipo' => $_POST['tipo'], 'valor' => $_POST['valor']]);
 }

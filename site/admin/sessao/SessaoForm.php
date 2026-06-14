@@ -9,6 +9,7 @@ $error = '';
 $errors = [];
 $data = new stdClass();
 
+// novo ou edição
 if (!empty($_GET['id'])) {
     $data = $db->find((int) $_GET['id']);
 }
@@ -16,6 +17,7 @@ if (!empty($_GET['id'])) {
 if (!empty($_POST)) {
     $data = (object) $_POST;
 
+    // valida
     if (empty($_POST['sala']))
         $errors[] = '<li>Sala é obrigatória.</li>';
     if (empty($_POST['data_sessao']))
@@ -25,6 +27,7 @@ if (!empty($_POST)) {
     if (!isset($_POST['preco']) || $_POST['preco'] === '')
         $errors[] = '<li>Preço é obrigatório.</li>';
 
+    // salva ou atualiza
     if (empty($errors)) {
         try {
             if (empty($_POST['id'])) {

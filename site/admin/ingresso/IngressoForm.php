@@ -9,6 +9,7 @@ $error = '';
 $errors = [];
 $data = new stdClass();
 
+// novo ou edição
 if (!empty($_GET['id'])) {
     $data = $db->find((int) $_GET['id']);
 }
@@ -16,6 +17,7 @@ if (!empty($_GET['id'])) {
 if (!empty($_POST)) {
     $data = (object) $_POST;
 
+    // valida
     if (empty($_POST['cliente_nome']))
         $errors[] = '<li>Nome do cliente é obrigatório.</li>';
     if (empty($_POST['assento']))
@@ -23,6 +25,7 @@ if (!empty($_POST)) {
     if (empty($_POST['tipo_ingresso']))
         $errors[] = '<li>Tipo de ingresso é obrigatório.</li>';
 
+    // salva ou atualiza
     if (empty($errors)) {
         try {
             if (empty($_POST['id'])) {

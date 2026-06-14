@@ -9,7 +9,7 @@ CREATE DATABASE IF NOT EXISTS `db_pweb1_cinema`
 
 USE `db_pweb1_cinema`;
 
--- Tabela de usuários (login do sistema)
+-- Tabela de usuários
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id`       INT(11)      NOT NULL AUTO_INCREMENT,
   `nome`     VARCHAR(100) NOT NULL,
@@ -55,7 +55,7 @@ INSERT INTO `usuarios` (`nome`, `telefone`, `email`, `login`, `senha`) VALUES
 ('Administrador', '(49) 99999-0000', 'admin@tapcine.com', 'admin',
  '$2y$10$ny12Hy1HvEJhG98wcGfr8ubyB3NjZZeTqHlK7U2GeG4qvnPlkYhAi');
 
--- Filmes pré-cadastrados (baseados no site TapCine)
+-- Filmes pré-cadastrados 
 INSERT INTO `filmes` (`titulo`, `genero`, `duracao`, `classificacao`) VALUES
 ('Super Mario Galaxy O Filme', 'Ação e Aventura', '1h39', '6+'),
 ('Crepúsculo (Relançamento)',  'Fantasia e Romance', '2h02', '12+'),

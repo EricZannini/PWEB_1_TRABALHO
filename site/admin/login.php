@@ -12,10 +12,13 @@ if (!empty($_POST)) {
     if (empty($login) || empty($senha)) {
         $error = 'Preencha login e senha.';
     } else {
+        // busca o usuário
         $db = new db('usuarios');
         $usuario = $db->findBy('login', $login);
 
+        // checa a senha
         if ($usuario && password_verify($senha, $usuario->senha)) {
+            // salva na sessão
             $_SESSION['usuario_id'] = $usuario->id;
             $_SESSION['usuario_nome'] = $usuario->nome;
             $_SESSION['usuario_email'] = $usuario->email;
