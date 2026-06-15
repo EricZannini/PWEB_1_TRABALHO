@@ -15,7 +15,7 @@ if (!empty($_GET['delete'])) {
 $ingressos = $db->all();
 
 // pesquisa
-if (!empty($_POST['buscar'])) {
+if (isset($_POST['buscar'])) {
     $ingressos = $db->search(['tipo' => $_POST['tipo'], 'valor' => $_POST['valor']]);
 }
 ?>
