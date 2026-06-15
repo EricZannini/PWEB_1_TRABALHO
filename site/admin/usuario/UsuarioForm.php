@@ -40,11 +40,11 @@ if (!empty($_POST)) {
                 $success = 'Usuário cadastrado com sucesso!';
             } else {
                 $dados = [
-                    'id'       => $_POST['id'],
-                    'nome'     => $_POST['nome'],
+                    'id' => $_POST['id'],
+                    'nome' => $_POST['nome'],
                     'telefone' => $_POST['telefone'] ?? '',
-                    'email'    => $_POST['email'],
-                    'login'    => $_POST['login'],
+                    'email' => $_POST['email'],
+                    'login' => $_POST['login'],
                 ];
                 // edição: só atualiza a senha se preenchida
                 if (!empty($_POST['senha'])) {

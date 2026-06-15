@@ -29,11 +29,11 @@ if (!empty($_POST)) {
         } else {
             // criptografa e salva
             $db->store([
-                'nome'     => $_POST['nome'],
+                'nome' => $_POST['nome'],
                 'telefone' => $_POST['telefone'] ?? '',
-                'email'    => $_POST['email'],
-                'login'    => $_POST['login'],
-                'senha'    => password_hash($_POST['senha'], PASSWORD_DEFAULT),
+                'email' => $_POST['email'],
+                'login' => $_POST['login'],
+                'senha' => password_hash($_POST['senha'], PASSWORD_DEFAULT),
             ]);
             $success = 'Usuário cadastrado com sucesso!';
             redirect('login.php');
