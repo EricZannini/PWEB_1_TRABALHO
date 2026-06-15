@@ -76,7 +76,7 @@ if (!empty($_POST['buscar'])) {
                         </a>
                         <a href="?delete=<?= $filme->id ?>"
                            class="btn btn-sm btn-outline-danger"
-                           onclick="return confirm('Excluir o filme «<?= htmlspecialchars($filme->titulo) ?>»?')">
+                           onclick="return confirm('Deseja excluir este filme?')">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>

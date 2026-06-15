@@ -74,7 +74,7 @@ if (!empty($_POST['buscar'])) {
                         </a>
                         <a href="?delete=<?= $ingresso->id ?>"
                            class="btn btn-sm btn-outline-danger"
-                           onclick="return confirm('Excluir o ingresso de <?= htmlspecialchars($ingresso->cliente_nome) ?>?')">
+                           onclick="return confirm('Deseja excluir este ingresso?')">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>

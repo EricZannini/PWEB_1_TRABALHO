@@ -76,7 +76,7 @@ if (!empty($_POST['buscar'])) {
                         </a>
                         <a href="?delete=<?= $usuario->id ?>"
                            class="btn btn-sm btn-outline-danger"
-                           onclick="return confirm('Excluir o usuário <?= htmlspecialchars($usuario->nome) ?>?')">
+                           onclick="return confirm('Deseja excluir este usuário?')">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>
