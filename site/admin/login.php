@@ -55,7 +55,7 @@ if (!empty($_POST)) {
                         <i class="fa-solid fa-user text-muted"></i>
                     </span>
                     <input type="text" name="login" class="form-control"
-                           value="<?= htmlspecialchars($_POST['login'] ?? '') ?>"
+                           value="<?= $_POST['login'] ?? '' ?>"
                            placeholder="Digite seu login" autofocus>
                 </div>
             </div>

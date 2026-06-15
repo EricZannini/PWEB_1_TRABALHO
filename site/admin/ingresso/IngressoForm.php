@@ -11,7 +11,7 @@ $data = new stdClass();
 
 // novo ou edição
 if (!empty($_GET['id'])) {
-    $data = $db->find((int) $_GET['id']);
+    $data = $db->find($_GET['id']);
 }
 
 if (!empty($_POST)) {

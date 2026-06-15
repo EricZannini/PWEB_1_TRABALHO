@@ -7,7 +7,7 @@ $db = new db('filmes');
 
 // deleta
 if (!empty($_GET['delete'])) {
-    $db->destroy((int) $_GET['delete']);
+    $db->destroy($_GET['delete']);
     $msgDelete = 'Filme excluído com sucesso!';
 }
 
@@ -39,7 +39,7 @@ if (!empty($_POST['buscar'])) {
     </select>
     <input type="text" name="valor" class="form-control" style="max-width:260px;"
            placeholder="Pesquisar..."
-           value="<?= htmlspecialchars($_POST['valor'] ?? '') ?>">
+           value="<?= $_POST['valor'] ?? '' ?>">
     <button type="submit" name="buscar" class="btn btn-outline-light">
         <i class="fa-solid fa-magnifying-glass me-1"></i>Buscar
     </button>
@@ -66,10 +66,10 @@ if (!empty($_POST['buscar'])) {
                 <?php foreach ($filmes as $filme): ?>
                 <tr>
                     <td class="text-muted small"><?= $filme->id ?></td>
-                    <td><?= htmlspecialchars($filme->titulo) ?></td>
-                    <td><?= htmlspecialchars($filme->genero) ?></td>
-                    <td><?= htmlspecialchars($filme->duracao) ?></td>
-                    <td><span class="badge bg-secondary"><?= htmlspecialchars($filme->classificacao) ?></span></td>
+                    <td><?= $filme->titulo ?></td>
+                    <td><?= $filme->genero ?></td>
+                    <td><?= $filme->duracao ?></td>
+                    <td><span class="badge bg-secondary"><?= $filme->classificacao ?></span></td>
                     <td>
                         <a href="FilmeForm.php?id=<?= $filme->id ?>" class="btn btn-sm btn-outline-primary me-1">
                             <i class="fa-solid fa-pen-to-square"></i>

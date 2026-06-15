@@ -7,7 +7,7 @@ $db = new db('usuarios');
 
 // deleta
 if (!empty($_GET['delete'])) {
-    $db->destroy((int) $_GET['delete']);
+    $db->destroy($_GET['delete']);
     $msgDelete = 'Usuário excluído com sucesso!';
 }
 
@@ -39,7 +39,7 @@ if (!empty($_POST['buscar'])) {
     </select>
     <input type="text" name="valor" class="form-control" style="max-width:260px;"
            placeholder="Pesquisar..."
-           value="<?= htmlspecialchars($_POST['valor'] ?? '') ?>">
+           value="<?= $_POST['valor'] ?? '' ?>">
     <button type="submit" name="buscar" class="btn btn-outline-light">
         <i class="fa-solid fa-magnifying-glass me-1"></i>Buscar
     </button>
@@ -66,10 +66,10 @@ if (!empty($_POST['buscar'])) {
                 <?php foreach ($usuarios as $usuario): ?>
                 <tr>
                     <td class="text-muted small"><?= $usuario->id ?></td>
-                    <td><?= htmlspecialchars($usuario->nome) ?></td>
-                    <td><?= htmlspecialchars($usuario->email) ?></td>
-                    <td><?= htmlspecialchars($usuario->telefone ?? '') ?></td>
-                    <td><code><?= htmlspecialchars($usuario->login) ?></code></td>
+                    <td><?= $usuario->nome ?></td>
+                    <td><?= $usuario->email ?></td>
+                    <td><?= $usuario->telefone ?? '' ?></td>
+                    <td><code><?= $usuario->login ?></code></td>
                     <td>
                         <a href="UsuarioForm.php?id=<?= $usuario->id ?>" class="btn btn-sm btn-outline-primary me-1">
                             <i class="fa-solid fa-pen-to-square"></i>

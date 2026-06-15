@@ -128,7 +128,7 @@ function getFormValue($data, $field)
             <div class="col-4 text-center">
                 <?php if (isset($_SESSION['usuario_nome'])): ?>
                     <span class="text-white-50 small">
-                        Olá, <?= htmlspecialchars($_SESSION['usuario_nome']) ?>
+                        Olá, <?= $_SESSION['usuario_nome'] ?>
                     </span>
                 <?php endif; ?>
             </div>

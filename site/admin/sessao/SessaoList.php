@@ -7,7 +7,7 @@ $db = new db('sessoes');
 
 // deleta
 if (!empty($_GET['delete'])) {
-    $db->destroy((int) $_GET['delete']);
+    $db->destroy($_GET['delete']);
     $msgDelete = 'Sessão excluída com sucesso!';
 }
 
@@ -38,7 +38,7 @@ if (!empty($_POST['buscar'])) {
     </select>
     <input type="text" name="valor" class="form-control" style="max-width:260px;"
            placeholder="Pesquisar..."
-           value="<?= htmlspecialchars($_POST['valor'] ?? '') ?>">
+           value="<?= $_POST['valor'] ?? '' ?>">
     <button type="submit" name="buscar" class="btn btn-outline-light">
         <i class="fa-solid fa-magnifying-glass me-1"></i>Buscar
     </button>
@@ -65,7 +65,7 @@ if (!empty($_POST['buscar'])) {
                 <?php foreach ($sessoes as $sessao): ?>
                 <tr>
                     <td class="text-muted small"><?= $sessao->id ?></td>
-                    <td><?= htmlspecialchars($sessao->sala) ?></td>
+                    <td><?= $sessao->sala ?></td>
                     <td><?= date('d/m/Y', strtotime($sessao->data_sessao)) ?></td>
                     <td><?= substr($sessao->hora_inicio, 0, 5) ?></td>
                     <td>R$ <?= number_format($sessao->preco, 2, ',', '.') ?></td>

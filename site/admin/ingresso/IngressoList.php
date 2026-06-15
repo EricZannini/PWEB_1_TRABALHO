@@ -7,7 +7,7 @@ $db = new db('ingressos');
 
 // deleta
 if (!empty($_GET['delete'])) {
-    $db->destroy((int) $_GET['delete']);
+    $db->destroy($_GET['delete']);
     $msgDelete = 'Ingresso excluído com sucesso!';
 }
 
@@ -39,7 +39,7 @@ if (!empty($_POST['buscar'])) {
     </select>
     <input type="text" name="valor" class="form-control" style="max-width:260px;"
            placeholder="Pesquisar..."
-           value="<?= htmlspecialchars($_POST['valor'] ?? '') ?>">
+           value="<?= $_POST['valor'] ?? '' ?>">
     <button type="submit" name="buscar" class="btn btn-outline-light">
         <i class="fa-solid fa-magnifying-glass me-1"></i>Buscar
     </button>
@@ -65,9 +65,9 @@ if (!empty($_POST['buscar'])) {
                 <?php foreach ($ingressos as $ingresso): ?>
                 <tr>
                     <td class="text-muted small"><?= $ingresso->id ?></td>
-                    <td><?= htmlspecialchars($ingresso->cliente_nome) ?></td>
-                    <td><span class="badge bg-secondary"><?= htmlspecialchars($ingresso->assento) ?></span></td>
-                    <td><?= htmlspecialchars($ingresso->tipo_ingresso) ?></td>
+                    <td><?= $ingresso->cliente_nome ?></td>
+                    <td><span class="badge bg-secondary"><?= $ingresso->assento ?></span></td>
+                    <td><?= $ingresso->tipo_ingresso ?></td>
                     <td>
                         <a href="IngressoForm.php?id=<?= $ingresso->id ?>" class="btn btn-sm btn-outline-primary me-1">
                             <i class="fa-solid fa-pen-to-square"></i>
