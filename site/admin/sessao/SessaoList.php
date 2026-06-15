@@ -61,6 +61,7 @@ if (!empty($_POST['buscar'])) {
             <?php if (empty($sessoes)): ?>
                 <tr><td colspan="6" class="text-center text-muted py-4">Nenhuma sessão encontrada.</td></tr>
             <?php else: ?>
+                <?php // mostra cada linha na tabela ?>
                 <?php foreach ($sessoes as $sessao): ?>
                 <tr>
                     <td class="text-muted small"><?= $sessao->id ?></td>

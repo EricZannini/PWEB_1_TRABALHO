@@ -62,6 +62,7 @@ if (!empty($_POST['buscar'])) {
             <?php if (empty($filmes)): ?>
                 <tr><td colspan="6" class="text-center text-muted py-4">Nenhum filme encontrado.</td></tr>
             <?php else: ?>
+                <?php // mostra cada linha na tabela ?>
                 <?php foreach ($filmes as $filme): ?>
                 <tr>
                     <td class="text-muted small"><?= $filme->id ?></td>

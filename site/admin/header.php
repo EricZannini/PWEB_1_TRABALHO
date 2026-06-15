@@ -1,14 +1,17 @@
 <?php
 
+// evita abrir sessão duas vezes
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+// redireciona com um pequeno delay (em ms)
 function redirect($page, $time = 1500)
 {
     echo "<script>setTimeout(() => { window.location.href = '$page'; }, $time);</script>";
 }
 
+// mostra mensagem de sucesso ou erro na tela
 function actionMessage($success = '', $actionError = '')
 {
     if (!empty($success)) {
@@ -25,6 +28,7 @@ function actionMessage($success = '', $actionError = '')
     }
 }
 
+// lista os erros de validação em formato de lista
 function showValidationError($errors = [])
 {
     if (!empty($errors)) {
@@ -36,6 +40,7 @@ function showValidationError($errors = [])
     }
 }
 
+// mantém o valor preenchido no input caso o formulário dê erro
 function getFormValue($data, $field)
 {
     if (is_object($data) && isset($data->$field)) {
@@ -108,6 +113,7 @@ function getFormValue($data, $field)
 
 <div class="container">
 
+    <?php // esconde o cabeçalho nas páginas de login e cadastro ?>
     <?php if (empty($paginaAuth)): ?>
     <header class="blog-header glass-effect">
         <div class="row d-flex justify-content align-items-center">
@@ -140,6 +146,7 @@ function getFormValue($data, $field)
     </header>
     <?php endif; ?>
 
+    <?php // só mostra o menu se estiver logado ?>
     <?php if (isset($_SESSION['usuario_id'])): ?>
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav flex justify-content-between">

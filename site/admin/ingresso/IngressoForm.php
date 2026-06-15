@@ -58,6 +58,7 @@ if (!empty($_POST)) {
     <?php actionMessage($success, $error); showValidationError($errors); ?>
 
     <form method="POST">
+        <?php // id escondido — define se vai cadastrar ou editar ?>
         <input type="hidden" name="id" value="<?= getFormValue($data, 'id') ?>">
 
         <div class="mb-3">

@@ -5,6 +5,7 @@ include_once 'database/db.class.php';
 
 $error = '';
 
+// só processa se o formulário foi enviado
 if (!empty($_POST)) {
     $login = trim($_POST['login'] ?? '');
     $senha = $_POST['senha'] ?? '';

@@ -8,7 +8,7 @@ $dbSessao = new db('sessoes');
 $dbIngresso = new db('ingressos');
 $dbUsuario = new db('usuarios');
 
-// conta pra mostrar nos cards
+// conta para mostrar nos cards
 $totalFilmes = count($dbFilme->all());
 $totalSessoes = count($dbSessao->all());
 $totalIngressos = count($dbIngresso->all());

@@ -61,6 +61,7 @@ if (!empty($_POST['buscar'])) {
             <?php if (empty($ingressos)): ?>
                 <tr><td colspan="5" class="text-center text-muted py-4">Nenhum ingresso encontrado.</td></tr>
             <?php else: ?>
+                <?php // mostra cada linha na tabela ?>
                 <?php foreach ($ingressos as $ingresso): ?>
                 <tr>
                     <td class="text-muted small"><?= $ingresso->id ?></td>

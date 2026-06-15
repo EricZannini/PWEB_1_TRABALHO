@@ -46,7 +46,7 @@ if (!empty($_POST)) {
                     'email'    => $_POST['email'],
                     'login'    => $_POST['login'],
                 ];
-                // edição: só atualiza senha se preenchida
+                // edição: só atualiza a senha se preenchida
                 if (!empty($_POST['senha'])) {
                     $dados['senha'] = password_hash($_POST['senha'], PASSWORD_DEFAULT);
                 }
@@ -75,6 +75,7 @@ if (!empty($_POST)) {
     <?php actionMessage($success, $error); showValidationError($errors); ?>
 
     <form method="POST">
+        <?php // id escondido — define se vai cadastrar ou editar ?>
         <input type="hidden" name="id" value="<?= getFormValue($data, 'id') ?>">
 
         <div class="mb-3">
